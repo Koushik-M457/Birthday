@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Birthday Experience</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Preload scripts -->
+    <script src="/static/js/stars.js" defer></script>
+    <script src="/static/js/cinematic.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Starry Background -->
+    <div id="stars-container">
+        <!-- Stars will be injected here by stars.js if it exists, or we use CSS fallback -->
+        <canvas id="stars"></canvas>
+    </div>
+
+    <!-- Interaction Overlay (Fixes Autoplay) -->
+    <div id="enter-overlay">
+        <div class="enter-btn">Click to Enter</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="glass-panel">
+            <h1>Happy Birthday</h1>
+            <p class="subtitle">A cinematic experience just for you</p>
+
+            <div id="message" class="message-box">
+                <!-- Dynamic text appears here -->
+            </div>
+
+            <div class="controls">
+                <button id="playBtn">▶</button>
+                <div style="flex-grow: 1; margin: 0 10px;">
+                    <!-- Simple progress bar could go here, keeping it minimal -->
+                </div>
+            </div>
+
+            <p id="timer" style="margin-top:30px;">This moment is Fleeting...</p>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="bg-music" src="/static/audio/music.mp3" loop></audio>
+
+</body>
+
+</html>

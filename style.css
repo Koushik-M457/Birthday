@@ -1,0 +1,139 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}
+
+/* =========================
+   START SCREEN
+========================= */
+.start-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, #000000, #121212);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
+}
+
+.start-screen h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: glow 2s infinite alternate;
+}
+
+.start-screen p {
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+
+.start-screen button {
+  margin-top: 25px;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.start-screen button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #ff4d6d;
+}
+
+/* =========================
+   MAIN SECTIONS
+========================= */
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Intro Text */
+.intro h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.4rem;
+  opacity: 0.85;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.delay {
+  animation-delay: 1.5s;
+}
+
+/* Hidden utility */
+.hidden {
+  display: none;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glow animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff4d6d;
+  }
+
+  to {
+    text-shadow: 0 0 30px #ff4d6d;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .start-screen h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro h1 {
+    font-size: 2.8rem;
+  }
+
+  .intro p {
+    font-size: 1.1rem;
+  }
+}
